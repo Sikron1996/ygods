@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Y00ts DeG0ds</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#">Y00TS DEG0DS</a>
+  <button id="topConnect" type="button">Mint Now</button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="left">
+      <div class="pill">OPENSEA DROP</div>
+      <h1>Meet the<br><span>Y00ts</span><br>DeG0ds</h1>
+      <p class="lead">10k unique characters with distinct traits, accessories, and vibes. Each Y00ts DeG0ds is one-of-a-kind art.</p>
+      <button id="openMintBtn" class="outline-btn" type="button">▱ Mint on Ethereum</button>
+
+      <div class="progress-card" id="mint">
+        <div class="progress-head">
+          <h2>Mint Progress</h2>
+          <span>● Live on-chain</span>
+        </div>
+
+        <div class="stat-grid">
+          <div><small>MINTED</small><b><span id="mintedText">0</span></b></div>
+          <div><small>REMAINING</small><b id="remainingText">10 000</b></div>
+          <div><small>MINT PRICE</small><b id="priceText">FREE</b></div>
+        </div>
+
+        <div class="mint-controls">
+          <div class="counter">
+            <button id="minus" type="button">−</button>
+            <input id="amount" value="1" inputmode="numeric">
+            <button id="plus" type="button">+</button>
+          </div>
+          <div class="total">TOTAL: <b id="totalPrice">FREE</b></div>
+          <button id="connectBtn" type="button">CONNECT WALLET</button>
+          <button id="mintBtn" class="hiddenBtn" type="button">MINT NOW</button>
+          <p id="wallet">not connected</p>
+          <p id="status">Insert contract address in app.js</p>
+        </div>
+
+        <div class="progress-label">
+          <span id="progressText">0% minted</span>
+          <span><span id="mintedBottom">0</span> / 10 000</span>
+        </div>
+        <div class="bar"><div id="progressBar"></div></div>
+      </div>
+    </div>
+
+    <div class="grid-nine">
+      <img src="assets/degod1.png" alt="Y00ts DeG0ds"><img src="assets/degod2.png" alt="Y00ts DeG0ds"><img src="assets/degod3.png" alt="Y00ts DeG0ds"><img src="assets/degod4.png" alt="Y00ts DeG0ds"><img src="assets/degod5.png" alt="Y00ts DeG0ds"><img src="assets/degod6.png" alt="Y00ts DeG0ds"><img src="assets/degod1.png" alt="Y00ts DeG0ds"><img src="assets/degod2.png" alt="Y00ts DeG0ds"><img src="assets/degod3.png" alt="Y00ts DeG0ds">
+    </div>
+  </section>
+
+  <nav class="links">
+    <a href="https://opensea.io/" target="_blank">OpenSea</a>
+    <a href="https://x.com/" target="_blank">X / Twitter</a>
+    <a id="etherscanLink" href="https://etherscan.io/" target="_blank">Etherscan</a>
+  </nav>
+</main>
+
+<div id="walletModal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModalBtn" class="close" type="button">×</button>
+    <h3>Connect Wallet</h3>
+    <button id="browserWalletBtn" type="button">MetaMask / Rabby / OKX</button>
+    <button id="walletConnectBtn" type="button">WalletConnect / Mobile</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

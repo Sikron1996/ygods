@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500;700;900&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:#f4f4f2;
+  background:#090a0b;
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 28% 20%, rgba(190,255,83,.08), transparent 28%),
+    radial-gradient(circle at 75% 55%, rgba(190,255,83,.05), transparent 25%),
+    linear-gradient(180deg,#0e0f12,#08090b);
+  z-index:-3;
+}
+body:after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.023) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size:28px 28px;
+  opacity:.65;
+  z-index:-2;
+}
+.topbar{
+  height:82px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 min(42px,5vw);
+}
+.logo{
+  color:#baff4a;
+  text-decoration:none;
+  font-family:"Archivo Black",Inter,sans-serif;
+  font-size:25px;
+  letter-spacing:1px;
+}
+.topbar button{
+  background:#baff4a;
+  color:#0b0c0e;
+  border:0;
+  border-radius:999px;
+  padding:15px 28px;
+  font-weight:900;
+  cursor:pointer;
+}
+main{
+  width:min(1180px,calc(100% - 56px));
+  margin:0 auto;
+}
+.hero{
+  min-height:720px;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:64px;
+  align-items:start;
+  padding:82px 0 44px;
+}
+.pill{
+  display:inline-block;
+  padding:12px 18px;
+  color:#baff4a;
+  background:rgba(186,255,74,.1);
+  border:1px solid rgba(186,255,74,.35);
+  border-radius:999px;
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:900;
+}
+h1,h2{
+  font-family:"Archivo Black",Inter,sans-serif;
+  letter-spacing:-2px;
+}
+h1{
+  font-size:clamp(52px,6.2vw,84px);
+  line-height:.94;
+  margin:28px 0 24px;
+}
+h1 span{color:#baff4a}
+.lead{
+  color:#8f8f9d;
+  line-height:1.65;
+  font-size:20px;
+  max-width:650px;
+  margin:0 0 28px;
+}
+.outline-btn{
+  min-height:62px;
+  padding:0 30px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  color:#f4f4f2;
+  font-weight:800;
+  font-size:19px;
+  background:rgba(255,255,255,.02);
+  cursor:pointer;
+  margin-bottom:40px;
+}
+.progress-card{
+  width:min(640px,100%);
+  background:#17161e;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:24px;
+  padding:38px 42px;
+  box-shadow:0 24px 70px rgba(0,0,0,.25);
+}
+.progress-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:28px;
+}
+.progress-head h2{
+  margin:0;
+  font-size:28px;
+}
+.progress-head span{
+  color:#baff4a;
+  border:1px solid rgba(186,255,74,.28);
+  background:rgba(186,255,74,.08);
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:900;
+}
+.stat-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-bottom:26px;
+}
+.stat-grid div{
+  min-height:126px;
+  background:#22212a;
+  border-radius:12px;
+  padding:24px;
+}
+.stat-grid small{
+  display:block;
+  color:#8f8f9d;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+.stat-grid b{
+  font-family:"Archivo Black",Inter,sans-serif;
+  font-size:26px;
+  line-height:1.35;
+}
+.mint-controls{
+  margin:4px 0 24px;
+}
+.counter{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+}
+.counter button,.counter input{
+  height:48px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#22212a;
+  color:#fff;
+  border-radius:12px;
+  font-weight:900;
+  text-align:center;
+  font-size:20px;
+}
+.counter button{width:52px;cursor:pointer}
+.counter input{flex:1}
+.total{
+  color:#b8b8c1;
+  margin:0 0 12px;
+  font-size:13px;
+  font-weight:900;
+}
+#connectBtn,#mintBtn{
+  width:100%;
+  height:56px;
+  border:0;
+  border-radius:999px;
+  background:#baff4a;
+  color:#0b0c0e;
+  font-weight:1000;
+  cursor:pointer;
+}
+.hiddenBtn{display:none}
+#wallet,#status{
+  color:#8f8f9d;
+  margin:10px 0 0;
+  font-size:12px;
+}
+.progress-label{
+  display:flex;
+  justify-content:space-between;
+  color:#b8b8c1;
+  font-size:16px;
+  margin-bottom:10px;
+}
+.bar{
+  height:11px;
+  border-radius:999px;
+  background:#33323a;
+  overflow:hidden;
+}
+#progressBar{
+  height:100%;
+  width:0;
+  background:#baff4a;
+}
+.grid-nine{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  padding-top:210px;
+}
+.grid-nine img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:14px;
+  background:#c9eeee;
+  border:1px solid rgba(255,255,255,.08);
+}
+.links{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin:0 auto 60px;
+}
+.links a{
+  min-width:142px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  text-decoration:none;
+  font-weight:1000;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:17px;
+  background:rgba(255,255,255,.075);
+  backdrop-filter:blur(12px);
+}
+.modal{
+  position:fixed;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background:rgba(0,0,0,.7);
+  z-index:50;
+}
+.hidden{display:none}
+.modal-card{
+  width:min(390px,92vw);
+  background:#17161e;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  padding:24px;
+  position:relative;
+}
+.modal-card h3{margin:0 0 12px}
+.modal-card button{
+  width:100%;
+  height:48px;
+  margin-top:10px;
+  border:0;
+  border-radius:12px;
+  background:#baff4a;
+  color:#0b0c0e;
+  font-weight:900;
+  cursor:pointer;
+}
+.close{
+  position:absolute;
+  right:10px;
+  top:8px;
+  width:34px!important;
+  height:34px!important;
+  background:transparent!important;
+  color:#fff!important;
+  font-size:24px;
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:34px}
+  .grid-nine{padding-top:0}
+  main{width:min(100% - 30px,680px)}
+  .stat-grid{grid-template-columns:1fr}
+  .topbar{height:auto;padding:18px 16px;gap:12px}
+  .logo{font-size:18px}
+  .topbar button{padding:12px 18px}
+}
